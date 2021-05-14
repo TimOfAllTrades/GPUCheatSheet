@@ -34,4 +34,6 @@ int main(void)
         std::cout<<A[n] << "\n";
     }
 
+    //Erasing the CUDA array
+    cudaFree(A)
 }
