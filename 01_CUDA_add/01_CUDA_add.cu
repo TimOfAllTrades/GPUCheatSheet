@@ -22,7 +22,7 @@ int main(void)
     //Set device memory to 0
     cudaMemset(dev_A, 0, N*sizeof(int));
 
-    //Run Kernel
+    //Run Kernel, Using (N/5) blocks with 5 threads per block
     SetIndex<<<N/5,5>>>(dev_A);
 
     //Copy back results
