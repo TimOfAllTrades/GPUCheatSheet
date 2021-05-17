@@ -59,6 +59,6 @@ int main(void)
         std::cout<<A[n] << "\n";
     }
 
-    //Erasing the CUDA array
-    cudaFree(A);
+    //Erasing the CUDA array.  dev_A must be reallocated if to be used again.
+    cudaFree(dev_A);
 }
