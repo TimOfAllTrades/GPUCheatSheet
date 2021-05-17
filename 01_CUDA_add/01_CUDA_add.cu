@@ -20,7 +20,7 @@ __global__ void SetIndex(int *A)
 
 int main(void)
 {
-    //Set array size to 20 
+    //Set array size to 20
     int N = 20;
 
     //Declare host and device array pointer
