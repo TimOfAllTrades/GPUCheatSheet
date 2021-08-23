@@ -12,6 +12,11 @@ outdata = np.zeros((3), dtype = np.int)
 #Setting a pointer
 c_int_p = ctypes.POINTER(ctypes.c_int)
 #If float pointer is needed, use ctypes.c_float
+#Example:
+#numpyfloat = np.zeros(256, dtype=np.float32, order='F')
+#c_float_p = ctypes.POINTER(ctypes.c_float)
+#testlib = ctypes.CDLL("Thedll.dll")
+#testlib.function(numpyfloat.ctypes.data_as(c_float_p))
 
 #Load DLL
 testlib = ctypes.CDLL("./kernel.dll") #DLL Path here, sometimes a full path may be necessary.
