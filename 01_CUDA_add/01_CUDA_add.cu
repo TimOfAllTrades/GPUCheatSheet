@@ -17,6 +17,13 @@ __global__ void SetIndex(int *A)
     A[index] = AddOne(A[index]);
 
 }
+void Verify(int *A,int N)
+{
+    for (int n=0;n < N; n++)
+    {
+        std::cout<< A[n] << "\n";
+    }
+}
 
 int main(void)
 {
@@ -54,10 +61,7 @@ int main(void)
     cudaMemcpy(A, dev_A, N*sizeof(int), cudaMemcpyDeviceToHost);
 
     //Verify
-    for (int n = 0; n < N; n++)
-    {
-        std::cout<<A[n] << "\n";
-    }
+    Verify(A,N);
 
     //Erasing the CUDA array.  dev_A must be reallocated if to be used again.
     cudaFree(dev_A);
