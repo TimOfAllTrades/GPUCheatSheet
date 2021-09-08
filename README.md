@@ -5,8 +5,8 @@ Hello
 This repository contains some basic codes and functions of CUDA GPU programming and instructions on how to compile into a dll and linking it via C or python.
 Contains no proprietary or confidential code of any kind.  All information here is for educational purposes and provided as is.
 
-01 Shows the most basic structure of a CUDA program, including initializing arrays on system memory, moving it to the GPU memory,  performing a mathematical function on the GPU and copying the results back.
-
-02 Shows some examples how to compile C code into a dll file and how to link to the dll file for use in other programs.
-
-03 shows how to link to a dll via python ctypes library.
+Module/File             | Description
+------------            | -------------
+01          | A simple GPU function that does a simple matrix addition.  Contains examples on memory/pointer allocation, copying, launching kernels, defining device and host functions and releasing memory resources.
+02 | A simple example showing how to do static and dynamic linking for C++.  Not so important
+03 | An example on how to dynamically link compiled C++/GPU code to python via ctypes.  Covers how to do pass numpy array pointers, numbers to the C/GPU functions with the proper data type.
