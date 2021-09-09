@@ -1,0 +1,1 @@
+nvcc -o GPUkernal.dll --shared GPUkernel.cu
