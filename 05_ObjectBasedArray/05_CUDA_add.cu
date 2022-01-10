@@ -28,6 +28,7 @@ class ArrayInt
         zwidth = z;
     }
 
+    //Functions
     void CopyD2H ()
     {
         cudaMemcpy(Host, Device, N*sizeof(int), cudaMemcpyDeviceToHost);
@@ -166,8 +167,6 @@ int main(void)
 
     //Declare host and device array pointer
     ArrayInt A(20,1,1,"A.csv");
-    ArrayInt B(20,1,1,"B.csv");
-    ArrayInt C(20,1,1,"C.csv");
 
     //Set some initial values to host array
     for (int n = 0; n < N ; n++)
