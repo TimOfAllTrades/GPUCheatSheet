@@ -55,7 +55,10 @@ class ArrayInt
     int xwidth;
     int ywidth;
     int zwidth;
-    //const char *Description;
+    ArrayInt()
+    {
+
+    }
     ArrayInt(GlobalParameters ModelSpec)
     {
         N = ModelSpec.xwidth * ModelSpec.ywidth * ModelSpec.zwidth;
@@ -177,9 +180,9 @@ class ArrayInt
 class GPUFunction
 {
     public:
-    GlobalParameters dummyspec(0,0,0,0,0);
+    //GlobalParameters dummyspec(0,0,0,0,0);
     int N;
-    ArrayInt AddArray(dummyspec);
+    ArrayInt AddArray;
     
 
     void SetIndexP1(GlobalParameters ModelSpec)
