@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
- 
+
+int ReturnSIX(){
+    return 6;
+}
+
+int ReturnTWO(){
+    return 8;
+}
+
 class Point
 {
 private:
@@ -22,6 +30,20 @@ public:
     {
         return y;
     }
+
+    
+
+    int AddXY()
+    {
+        int a = ReturnSIX();
+        int b = ReturnTWO();
+        return a + b;
+    }
+
+    int ReturnTWO(){
+        return 2;
+    }
+
 };
  
 int main()
@@ -30,7 +52,7 @@ int main()
     Point p1(10, 15);
  
     // Access values assigned by constructor
-    cout << "p1.x = " << p1.getX() << ", p1.y = " << p1.getY();
- 
+    cout << "p1.x = " << p1.getX() << ", p1.y = " << p1.getY() << "\n";
+    cout << p1.AddXY() << "\n";
     return 0;
 }
