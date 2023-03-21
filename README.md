@@ -34,3 +34,8 @@ https://visualstudio.microsoft.com/
 The order of installation should be the GPU drivers, Microsoft Visual Studio Community and then the Nvidia CUDA toolkit.  In the Visual Studio Community setup, it is important to check "Desktop Development with C++" as that package contains the necessary compiler (it may contain a lot of uncessary stuff too, but I couldn't figure out which packages exactly are needed for compiling CUDA code).
 
 ![alt text](https://github.com/TimOfAllTrades/GPUCheatSheet/blob/master/DesktopDev.png?raw=true)
+
+It is also necessary to set an environment variable before GPU code can be compiled.  For windows 10 if you search view advanced system properties, the below menu should come up.
+
+![alt text](https://github.com/TimOfAllTrades/GPUCheatSheet/blob/master/SysVar.png?raw=true)
+
