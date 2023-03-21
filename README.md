@@ -39,3 +39,5 @@ It is also necessary to set an environment variable before GPU code can be compi
 
 ![alt text](https://github.com/TimOfAllTrades/GPUCheatSheet/blob/master/SysVar.png?raw=true)
 
+The "Path" variable should contain a directory that leads to "cl.exe" found in the Microsoft Visual Studio Community folder.
+
