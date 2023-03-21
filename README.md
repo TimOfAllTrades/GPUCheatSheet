@@ -13,7 +13,7 @@ Module/File             | Description
 04 | An example on how to flatten, pass and then reshape numpy arrays into a compiled DLL for processing and also shows an example of using the 3D grid in CUDA.  The example assumes the numpy array created in python is Fortran ordering, i.e. matrix indicies are such matrix[x][y][z] not matrix[z][y][x] (C ordering).
 05 | Several examples on how to use objects with C++
 
-Tutorial
+Getting started
 
 System requirements
 OS: Windows 10
@@ -39,5 +39,5 @@ It is also necessary to set an environment variable before GPU code can be compi
 
 ![alt text](https://github.com/TimOfAllTrades/GPUCheatSheet/blob/master/SysVar.png?raw=true)
 
-The "Path" variable should contain a directory that leads to "cl.exe" found in the Microsoft Visual Studio Community folder.
+The "Path" variable should contain a directory that leads to "cl.exe" found in the Microsoft Visual Studio Community folder.  Once this is complete, it should be possible to compile *.cu files from the command prompt.
 
