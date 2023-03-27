@@ -41,7 +41,16 @@ __global__ void FindMax(int *d)
 
 int main(void)
 {
+  /*
+  Shared memory allows r/w to an array that is accessible to all threads in a block.
+  This example shows how a threads each access their 4x4 sub blocks, find the largest number and store it in the shared memory array
+  Then the largest value is written to all array elements via the threads in the block.
+  */
 
+  //A 12 x 24 array that will be separated into 2 blocks.
+  //Each block will have 3x3 thread dimensions.
+  //Each thread will search a 4x4 square for the largest value.
+  
   int a[288] = {
   40,	44,	93,	3,	50,	73,	58,	47,	29,	8,	92,	47,
   54,	52,	20,	49,	27,	72,	2,	92,	37,	56,	98,	34,
@@ -84,31 +93,5 @@ int main(void)
 
   std::cout << "Max value of the first block" << a_result[0] << "\n";
   std::cout << "Max value of the second block" << a_result[145] << "\n";
-
-  /*
-  const int n = 64;
-  int a[n], r[n], d[n];
-
-  for (int i = 0; i < n; i++) {
-    a[i] = i;
-    r[i] = n-i-1;
-    d[i] = 0;
-  }
-
-  int *d_d;
-  cudaMalloc(&d_d, n * sizeof(int)); 
-
-  // run version with static shared memory
-  cudaMemcpy(d_d, a, n*sizeof(int), cudaMemcpyHostToDevice);
-  staticReverse<<<1,n>>>(d_d, n);
-  cudaMemcpy(d, d_d, n*sizeof(int), cudaMemcpyDeviceToHost);
-  for (int i = 0; i < n; i++) 
-    if (d[i] != r[i]) printf("Error: d[%d]!=r[%d] (%d, %d)n", i, i, d[i], r[i]);
-
-  // run dynamic shared memory version
-  cudaMemcpy(d_d, a, n*sizeof(int), cudaMemcpyHostToDevice);
-  dynamicReverse<<<1,n,n*sizeof(int)>>>(d_d, n);
-  cudaMemcpy(d, d_d, n * sizeof(int), cudaMemcpyDeviceToHost);
-  for (int i = 0; i < n; i++) 
-    if (d[i] != r[i]) printf("Error: d[%d]!=r[%d] (%d, %d)n", i, i, d[i], r[i]);*/
+  
 }
