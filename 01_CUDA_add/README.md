@@ -22,4 +22,4 @@ __global__ void SetIndex(int *A)
 }
 
 ```
-The function with the __global__ declaration specifier is the 
+The function with the \_\_global\_\_ declaration specifier is the 
