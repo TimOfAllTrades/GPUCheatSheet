@@ -1,6 +1,7 @@
 #include <iostream>
 
-//Compile code nvcc -o [kernalname].dll --shared [kernalcode].cu
+//Compile code: nvcc -o floatadd.dll --shared PassingFloat.cu
+
 extern "C" {
     __global__ void GPUfunction(float *A, float a)
     {
