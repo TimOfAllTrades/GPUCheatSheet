@@ -7,9 +7,9 @@ __global__ void FindMax(int *d)
   
   s[threadIdx.x + 3*threadIdx.y] = 0;
 
-  for (int i=0; i < 3; i++)
+  for (int i=0; i < 4; i++)
   {
-    for (int j=0; j<3;j++)
+    for (int j=0; j<4;j++)
     {
       int index = i+(4*threadIdx.x) + (j+(4*threadIdx.y))*12+144*blockIdx.y;
       if (d[index] > s[threadIdx.x + 3*threadIdx.y]){
@@ -28,9 +28,9 @@ __global__ void FindMax(int *d)
     }
   }
 
-  for (int i=0; i < 3; i++)
+  for (int i=0; i < 4; i++)
   {
-    for (int j=0; j<3;j++)
+    for (int j=0; j<4;j++)
     {
       int index = i+(4*threadIdx.x) + (j+(4*threadIdx.y))*12+144*blockIdx.y;
       d[index] = max;
@@ -50,7 +50,7 @@ int main(void)
   //A 12 x 24 array that will be separated into 2 blocks.
   //Each block will have 3x3 thread dimensions.
   //Each thread will search a 4x4 square for the largest value.
-  
+
   int a[288] = {
   40,	44,	93,	3,	50,	73,	58,	47,	29,	8,	92,	47,
   54,	52,	20,	49,	27,	72,	2,	92,	37,	56,	98,	34,
