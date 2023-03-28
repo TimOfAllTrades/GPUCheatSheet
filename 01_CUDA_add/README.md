@@ -2,9 +2,9 @@
 
 The purpose of this program is to do a basic matrix addition using the GPU.
 
-To compile this program in the command prompt, type:
-nvcc 01_CUDA_add.cu -o 01_CUDA_add.exe
-You can replace the input and output filenames as you wish
+To compile this program in the command prompt, type:\n
+nvcc 01_CUDA_add.cu -o 01_CUDA_add.exe\n
+You can replace the input and output filenames as you wish\n
 
 Background
 
