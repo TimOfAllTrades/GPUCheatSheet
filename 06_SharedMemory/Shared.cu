@@ -28,9 +28,9 @@ __global__ void FindMax(int *d)
     }
   }
 
-  for (int i=0; i < 4; i++)
+  for (int i=0; i<4; i++)
   {
-    for (int j=0; j<4;j++)
+    for (int j=0; j<4; j++)
     {
       int index = i+(4*threadIdx.x) + (j+(4*threadIdx.y))*12+144*blockIdx.y;
       d[index] = max;
